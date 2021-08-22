@@ -1,0 +1,3 @@
+@mixin text-bg-transition($param1, $param2) {
+	transition: $param1 0.2s ease-in-out, $param2 0.2s ease-in-out;
+}

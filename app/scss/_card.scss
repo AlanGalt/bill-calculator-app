@@ -1,0 +1,183 @@
+.card {
+	flex-direction: column; //row
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	flex-grow: 3;
+	background: $white;
+	padding: 2rem;
+	max-width: 57.5rem;
+	.left-container {
+		width: 100%;
+	}
+
+	@media (min-width: 920px) {
+		flex-direction: row;
+		max-height: 30rem;
+		border-radius: 20px;
+
+		.left-container {
+			margin-right: 3rem;
+		}
+		.result {
+			height: 25.9rem;
+			section {
+				margin-bottom: 3.625rem;
+				h3 {
+					font-size: 3rem;
+				}
+			}
+			padding-bottom: 2.5rem;
+			padding-left: 2.625rem;
+			padding-right: 2.625rem;
+		}
+	}
+	//
+
+	//
+}
+
+.bill {
+	margin-bottom: 2.375rem;
+	width: 100%;
+}
+
+label {
+	color: $gray-text;
+	padding-bottom: 0.75rem;
+	display: inline-block;
+}
+
+input {
+	width: 100%;
+	border: none;
+	border-radius: 5px;
+	text-align: right;
+	height: 3rem;
+	padding: 1rem 1.125rem;
+	font-size: 1.225rem;
+	color: $dark-text;
+	caret-color: $selected;
+	background-color: $input-bg;
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	&:focus {
+		outline: 2px solid $highlight;
+	}
+
+	&[id='bill-input'] {
+		background-image: url('/images/icon-dollar.svg');
+		background-repeat: no-repeat;
+		background-position: 1rem;
+	}
+
+	&[id='people-input'] {
+		background-image: url('/images/icon-person.svg');
+		background-repeat: no-repeat;
+		background-position: 1rem;
+	}
+
+	&[type='number'] {
+		-moz-appearance: textfield;
+	}
+
+	&[type='number']::-webkit-inner-spin-button,
+	&[type='number']::-webkit-outer-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+}
+
+.tip-select {
+	width: 100%;
+	margin-bottom: 2.375rem;
+}
+
+.selected {
+	background-color: $selected;
+	color: $dark-text;
+
+	&[id$='input'] {
+		background-color: $input-bg;
+		outline: 2px solid $selected;
+	}
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 1rem;
+
+	@media (min-width: 500px) {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+button {
+	height: 3rem;
+	background-color: $dark-text;
+	border: none;
+	color: white;
+	border-radius: 5px;
+	font-size: 1.225rem;
+	@include text-bg-transition(color, background-color);
+	&:hover {
+		cursor: pointer;
+		background-color: $highlight;
+		color: $dark-text;
+	}
+}
+
+.people {
+	margin-bottom: 2rem;
+}
+
+.result {
+	flex-direction: column;
+	background: $dark-text;
+	border-radius: 16px;
+	padding: 2.8125rem 1.5rem 1.5rem 1.5rem;
+	// height: 100%;
+	section {
+		margin-bottom: 2rem;
+		h2 {
+			font-size: 1rem;
+			color: $white;
+		}
+
+		h3 {
+			color: $selected;
+			font-size: 1.5rem;
+		}
+
+		p {
+			color: $gray-text;
+			font-size: 0.8125rem;
+		}
+	}
+
+	.tip-info {
+		flex-direction: column;
+	}
+
+	.reset {
+		width: 100%;
+		background-color: $selected;
+		color: $dark-text;
+		&:hover {
+			background-color: $highlight;
+		}
+	}
+}
+
+.error-msg {
+	display: inline;
+	color: $error;
+	visibility: hidden;
+}
+
+.showing {
+	visibility: visible;
+}

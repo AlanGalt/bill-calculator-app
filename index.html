@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			media="screen"
+			href="/dist/style.css"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Splitter</title>
+	</head>
+	<body class="flex flex-ai-c flex-jc-c">
+		<section class="main flex flex-ai-c">
+			<header>
+				<h1>SPLI<br />TTER</h1>
+			</header>
+
+			<section class="card flex flex-ai-c">
+				<div class="left-container">
+					<section class="bill">
+						<div class="flex flex-jc-spb">
+							<label for="bill-input">Bill</label>
+							<p class="error-msg">Can't be zero</p>
+						</div>
+						<input
+							id="bill-input"
+							type="text"
+							inputmode="numeric"
+							min="0"
+							max="10000"
+							step="0.01"
+							placeholder="0"
+							onpaste="return false"
+						/>
+					</section>
+					<section class="tip-select">
+						<div class="flex flex-jc-spb">
+							<label for="tip-btns">Select Tip %</label>
+							<p class="error-msg">Can't be zero</p>
+						</div>
+						<div class="grid-container" id="tip-btns">
+							<button type="button" value="5">5%</button>
+							<button type="button" value="10">10%</button>
+							<button type="button" value="15">15%</button>
+							<button type="button" value="25">25%</button>
+							<button type="button" value="50">50%</button>
+							<input
+								id="tip-input"
+								type="text"
+								inputmode="numeric"
+								placeholder="Custom"
+								onpaste="return false"
+							/>
+						</div>
+					</section>
+
+					<section class="people">
+						<div class="flex flex-jc-spb">
+							<label for="people-input">Number of People</label>
+							<p class="error-msg">Can't be zero</p>
+						</div>
+						<input
+							id="people-input"
+							type="text"
+							inputmode="numeric"
+							min="1"
+							max="50"
+							step="1"
+							placeholder="0"
+							onpaste="return false"
+						/>
+					</section>
+				</div>
+
+				<section class="result flex flex-jc-spb">
+					<div class="tip-info flex flex-jc-spb">
+						<section class="flex flex-ai-c flex-jc-spb">
+							<div>
+								<h2>Tip Amount</h2>
+								<p>/ person</p>
+							</div>
+							<h3 class="per-person">$0.00</h3>
+						</section>
+						<section class="flex flex-ai-c flex-jc-spb">
+							<div>
+								<h2>Total</h2>
+								<p>/ person</p>
+							</div>
+							<h3 class="total">$0.00</h3>
+						</section>
+					</div>
+					<button class="reset">RESET</button>
+				</section>
+			</section>
+		</section>
+		<script src="/app/js/main.js"></script>
+	</body>
+</html>
