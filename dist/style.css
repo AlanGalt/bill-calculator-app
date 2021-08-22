@@ -161,13 +161,13 @@ input:focus {
 }
 
 input[id='bill-input'] {
-  background-image: url("../../images/icon-dollar.svg");
+  background-image: url("../images/icon-dollar.svg");
   background-repeat: no-repeat;
   background-position: 1rem;
 }
 
 input[id='people-input'] {
-  background-image: url("../../images/icon-person.svg");
+  background-image: url("../images/icon-person.svg");
   background-repeat: no-repeat;
   background-position: 1rem;
 }
