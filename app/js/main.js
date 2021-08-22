@@ -116,6 +116,12 @@ function deleteHandler(e) {
 	}
 }
 
+for (elem of document.querySelectorAll('input')) {
+	elem.onpaste = function () {
+		return false;
+	};
+}
+
 bill.oninput = deleteHandler;
 tip.oninput = deleteHandler;
 people.oninput = deleteHandler;

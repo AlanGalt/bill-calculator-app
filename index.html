@@ -29,23 +29,19 @@
 				<div class="left-container">
 					<section class="bill">
 						<div class="flex flex-jc-spb">
-							<label for="bill-input">Bill</label>
+							<label>Bill</label>
 							<p class="error-msg">Can't be zero</p>
 						</div>
 						<input
 							id="bill-input"
 							type="text"
 							inputmode="numeric"
-							min="0"
-							max="10000"
-							step="0.01"
 							placeholder="0"
-							onpaste="return false"
 						/>
 					</section>
 					<section class="tip-select">
 						<div class="flex flex-jc-spb">
-							<label for="tip-btns">Select Tip %</label>
+							<label>Select Tip %</label>
 							<p class="error-msg">Can't be zero</p>
 						</div>
 						<div class="grid-container" id="tip-btns">
@@ -59,25 +55,20 @@
 								type="text"
 								inputmode="numeric"
 								placeholder="Custom"
-								onpaste="return false"
 							/>
 						</div>
 					</section>
 
 					<section class="people">
 						<div class="flex flex-jc-spb">
-							<label for="people-input">Number of People</label>
+							<label>Number of People</label>
 							<p class="error-msg">Can't be zero</p>
 						</div>
 						<input
 							id="people-input"
 							type="text"
 							inputmode="numeric"
-							min="1"
-							max="50"
-							step="1"
 							placeholder="0"
-							onpaste="return false"
 						/>
 					</section>
 				</div>
