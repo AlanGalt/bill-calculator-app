@@ -73,11 +73,11 @@ body {
   padding: 3.125rem;
 }
 
-@media (min-width: 920px) {
+/* @media (min-width: 920px) {
   .main {
     margin-top: 7rem;
   }
-}
+} */
 
 section {
   width: 100%;
