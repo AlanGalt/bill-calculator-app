@@ -11,13 +11,13 @@ let values = ['', '', ''];
 let selected = false;
 
 function updateTip() {
-    if (selected && values[0] && values[1] && values[2]) {
-        const tipPerPerson = values[0] * values[1] / 100 / values[2];
-        const totalPerPerson = parseInt(values[0]) / values[2] + tipPerPerson;
-        
-        perPerson.innerText = '$' + tipPerPerson.toFixed(2);
-        total.innerText = '$' + totalPerPerson.toFixed(2);
-    }
+	if (selected && values[0] && values[1] && values[2]) {
+		const tipPerPerson = values[0] * values[1] / 100 / values[2];
+		const totalPerPerson = parseInt(values[0]) / values[2] + tipPerPerson;
+		
+		perPerson.innerText = '$' + tipPerPerson.toFixed(2);
+		total.innerText = '$' + totalPerPerson.toFixed(2);
+	}
 }
 
 function select() {
