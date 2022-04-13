@@ -11,18 +11,18 @@ let values = ['', '', ''];
 let selected = false;
 
 function updateTip() {
-	if (selected && values[0] && values[1] && values[2]) {
-		perPerson.innerText =
-			'$' + ((values[0] * values[1]) / 100 / values[2]).toFixed(2);
-		total.innerText =
-			'$' +
-			((values[0] * ('1' + values[1])) / 100 / values[2]).toFixed(2);
-	}
+    if (selected && values[0] && values[1] && values[2]) {
+        const tipPerPerson = values[0] * values[1] / 100 / values[2];
+        const totalPerPerson = parseInt(values[0]) / values[2] + tipPerPerson;
+        
+        perPerson.innerText = '$' + tipPerPerson.toFixed(2);
+        total.innerText = '$' + totalPerPerson.toFixed(2);
+    }
 }
 
 function select() {
 	this.classList.toggle('selected');
-	for (var i = 0; i < buttons.length; i++) {
+	for (let i = 0; i < buttons.length; i++) {
 		if (this === buttons[i]) continue;
 		buttons[i].classList.remove('selected');
 	}
@@ -77,10 +77,10 @@ people.onkeypress = function (e) {
 
 reset.onclick = function () {
 	values = ['', '', ''];
-	for (button of buttons) {
+	for (let button of buttons) {
 		button.classList.remove('selected');
 	}
-	for (err of errors) {
+	for (let err of errors) {
 		err.classList.remove('showing');
 	}
 	this.classList.add('idle');
@@ -116,7 +116,7 @@ function deleteHandler(e) {
 	}
 }
 
-for (elem of document.querySelectorAll('input')) {
+for (let elem of document.querySelectorAll('input')) {
 	elem.onpaste = function () {
 		return false;
 	};
